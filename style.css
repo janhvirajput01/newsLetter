@@ -60,13 +60,16 @@ body {
   padding: 20px 0;
   position: relative;
 }
-.right img {
+.right .desk_img {
   padding-bottom: 40px;
   border-radius: 1rem;
   right: 10px;
   height: 100%;
   object-fit: contain;
   position: absolute;
+}
+.right .mob_img {
+  display: none;
 }
 h1 {
   color: var(--Dark_Slate_Grey);
@@ -194,14 +197,14 @@ button:hover {
     padding: 0;
     margin: 0;
   }
-  .right img {
-    border-radius: 0 1rem;
-    padding: 0;
-    margin: 0;
-    object-fit: cover;
-
+  .right .desk_img {
+    display: none;
+  }
+  .right .mob_img {
+    display: block;
     width: 100%;
-    border-radius: 2rem;
+    height: 40vh;
+    object-fit: cover;
   }
   .left {
     width: 100%;
