@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;1,700&family=Roboto&display=swap");
+:root {
+  --Dark_Slate_Grey: hsl(234, 29%, 20%);
+  --Charcoal_Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --text: hsl(230 29% 19%);
+  --White: hsl(0, 0%, 100%);
+  --Tomato: hsl(4, 100%, 67%);
+  --accent: 4 100% 67%;
+  --error: 4 58% 78%;
+  --ease-elastic: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter Medium"), url("/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter Bold"), url("/fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  height: 100vh;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Charcoal_Grey);
+}
+
+.container {
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: 1rem;
+  width: 60%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 55%;
+  margin-top: 2rem;
+  padding: 20px 50px;
+}
+.right {
+  width: 45%;
+  padding: 20px 0;
+  position: relative;
+}
+.right img {
+  padding-bottom: 40px;
+  border-radius: 1rem;
+  right: 10px;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+}
+h1 {
+  color: var(--Dark_Slate_Grey);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 2;
+}
+.left p,
+.left li {
+  color: var(--Charcoal_Grey);
+  font-weight: 700;
+}
+.left p {
+  margin: 20px 0;
+}
+
+.left ul li {
+  display: flex;
+  line-height: 2;
+}
+.left ul li img {
+  margin-right: 8px;
+}
+
+.email_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.email_container label {
+  font-weight: 600;
+  color: var(--Dark_Slate_Grey);
+  margin-bottom: 10px;
+}
+.email_container input {
+  border-radius: 10px;
+  color: var(--text);
+  border: 1px solid var(--Grey);
+  padding: 1rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+input:focus {
+  outline: 2px solid transparent;
+  box-shadow: 0px 0px 0px 3px hsl(var(--txt)),
+    0px 0px 0px 6px hsl(var(--Tomato));
+  cursor: pointer;
+}
+.email_label {
+  display: flex;
+  justify-content: space-between;
+}
+.email_label [for="error"] {
+  color: var(--Tomato);
+  opacity: 0;
+}
+button {
+  background-color: var(--text);
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 200ms var(--ease-elastic),
+    box-shadow 200ms var(--ease-elastic);
+  font-weight: 400;
+}
+button:hover {
+  border: none;
+  background-image: linear-gradient(90deg, var(--Tomato), #fd556c);
+}
+
+.card2 {
+  background-color: var(--White);
+  width: 30%;
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 10px;
+  font-weight: 700;
+  line-break: 0;
+}
+.card2 h1 {
+  line-height: 1.2;
+}
+.card2 img {
+  margin-bottom: 1.5rem;
+  width: 50px;
+}
+.card2 p {
+  font-weight: 400;
+  color: var(--Charcoal_Grey);
+  margin: 20px 0;
+}
+.card2 p span {
+  color: var(--Dark_Slate_Grey);
+  font-weight: 700;
+}
+.hide {
+  display: none;
+}
+.error {
+  background-color: hsl(var(--error) / 0.4);
+  box-shadow: 0 0 0 2px var(--Tomato);
+  color: var(--Tomato);
+}
+@media screen and (max-width: 1300px) {
+  body {
+    background-color: var(--White);
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  .right {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .right img {
+    border-radius: 0 1rem;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+
+    width: 100%;
+    border-radius: 2rem;
+  }
+  .left {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+  }
+  .left h1,
+  .left ul li {
+    line-height: 1;
+    margin: 20px 0;
+  }
+  .left h1 {
+    font-size: 2rem;
+  }
+  .card2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: 5rem;
+  }
+  .card2 button {
+    width: 70%;
+    position: absolute;
+    top: 80%;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container card1">
+      <div class="left">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="icon" />Product
+            discovery and building what matters
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="icon" />Product
+            discovery and building what matters
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="icon" />Product
+            discovery and building what matters
+          </li>
+        </ul>
+
+        <div class="email_container">
+          <div class="email_label">
+            <label for="email">Email address:</label>
+            <label for="error" id="error">Valid email required*</label>
+          </div>
+
+          <input type="email" placeholder="email@company.com" />
+        </div>
+
+        <button id="submit">Subscribe to monthly newsletter</button>
+      </div>
+      <div class="right">
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
+      </div>
+    </div>
+    <div class="card2 hide">
+      <img src="./assets/images/icon-list.svg" alt="" />
+      <h1>Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to
+        <span id="submit_email">abc@gmail.com .</span>Please check it and click
+        the button inside to confirm your subscription
+      </p>
+
+      <button id="dismiss">Dismiss message</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
